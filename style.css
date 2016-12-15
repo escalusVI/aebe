@@ -153,11 +153,18 @@ footer div{
 footer img{
 	width: 30px;
 	height: 30px;
-	/*margin-right: 15px;
-	margin-left: 15px;
-	margin-bottom: 15px;*/
 	margin: 15px;
-	
+}
+
+footer a{
+	-webkit-transition:-webkit-transform 2s;
+	transition: transform 2s, border-radius 1s;
+}
+
+footer a:hover{
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+	border-radius: 50px;
 }
 /*----------------------------------------------------------------Fin du footer-------------------------------------------------------------*/
 
