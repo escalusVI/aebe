@@ -70,9 +70,12 @@ nav a{/*mise en forme de la police du menu*/
 	
 }
 
-nav a:hover{
-	color: #83bf34;
+@media all and (min-width: 1024px){
+	nav a:hover{
+		color: #83bf34;
+	}
 }
+
 
 nav li{
 	padding: 10px;
@@ -209,34 +212,39 @@ footer a:hover{
 
 							
 	header ul{
-		margin:10px auto;
+		position: relative;
+		left:0px;
+		margin-top:50px;
 		padding:0px;
 		display:block;
 		list-style-type:none;
 		visibility: hidden;
 		opacity: 0;
-		transition: visibility 0s, opacity 1s linear;
+		transition: opacity 1s linear;
 	}
 							
 	header ul li{
-		background-color:#00c4ff;
+		background-image:url("images/footer.jpg");
 		border-bottom:solid 2px #555;
 	}
 							
 	header ul li:hover{
-		background-color:saddlebrown;
-		color:white;
+		background-color:#e6dcd2;
 		cursor:pointer;
 	}
 							
-	header:hover ul{
+	header:hover  ul{
 		visibility: visible;
 		opacity: 1;
 	 }
-	 
+
+	 li:hover a{
+		 color: #83bf34;
+	 }
 	section{
 		margin-top: 10%;
 		width:100%;
+
 		
 	}
 	
