@@ -1,6 +1,6 @@
-<a href="index.php"><img src="images/logo.png" id="logo"></a>
+
 <header>
-		<nav>
+	<nav>
 		<img src="images/header.png" alt="ardoise" id="ardoise"/>
 			<ul id="menu">
 				<li><a href="index.php">Acceuil</a></li>
@@ -10,4 +10,5 @@
 				<li><a href="reunion.php">Réunion</a></li>
 			</ul>
 		</nav>
+	<a href="index.php"><img src="images/logo.png" id="logo"></a>
 </header>
