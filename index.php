@@ -6,10 +6,9 @@
 		<title>AEBE</title>
 	</head>
 	<body>
-	<header>
-		<?php include ("include/header.php");?>
-	</header>
 	
+		<?php include ("include/header.php");?>
+		
 		<section>
 			<div class="textarea">
 				<h1>A propos</h1>
