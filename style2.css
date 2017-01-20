@@ -1,0 +1,285 @@
+@font-face{
+	font-family: 'erasdust';
+	src: url('font/erasdust.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'CrayonE';
+	src: url('font/CrayonE.ttf') format('truetype');
+}
+	
+html{
+	padding: 10px;
+	display:flex;
+	justify-content: center;	
+}
+
+body{
+	background-color: #e6dcd2;
+	width: 100%;
+}
+
+strong{
+	font-family: cursive;
+	font-weight: 100;
+}
+
+/*---------------------------------------------------- ----Mise en page du header----------------------------------------------------------*/
+@media all and (min-width: 1024px){
+#logo
+	{
+		width: 150px;
+		height: 150px;
+		left:15%;
+		top:15%;
+		position: absolute;
+	}	
+}
+
+
+header{
+	position:relative;
+	margin-bottom:15 px;
+}
+
+header img{/*definition de la taille*/
+	width: 100%;
+	height: 600px;
+	position: relative;
+}
+
+/*@media all and (min-width: 1024px){
+	nav{
+		min-width: 	500px;
+		min-height:598px;
+	}	
+}*/
+
+
+nav ul{/*mise en forme de la liste suppresion du style par défaut du  menu et placement par dessus l'ardoise*/
+	list-style-type: none;
+	position:absolute;
+	left: 40%;
+	top: 15%;
+}
+
+nav a{/*mise en forme de la police du menu*/
+	text-decoration: none;
+	color: white;
+	font-family: erasdust; 
+	font-size: 40px;
+	
+}
+
+@media all and (min-width: 1024px){
+	nav a:hover{
+		color: #83bf34;
+	}
+}
+
+
+nav li{
+	padding: 10px;
+}
+
+object{
+	width: 100%;
+	height: 300px;
+	margin-bottom: 0px;
+}
+/*--------------------------------------------------------------fin du header---------------------------------------------------------------*/
+
+/*---------------------------------------------------------Mise en page de la section------------------------------------------------------*/
+section{
+	background: url("images/background2.jpg")no-repeat;
+	background-position: center;
+	background-size: 100%;
+	width: 100%;
+	position: relative;
+	padding: 10px;
+	min-width: 960px;
+	min-height: 539px;
+	border-radius: 50px;
+
+}
+
+.textarea{
+	position: relative;
+	left: 25%;
+	width: 60%;
+	text-align: center;
+	line-height: 50px;
+	font-family: CrayonE;
+	background-color:rgba(255,255,255,0.5);
+	padding: 10px;
+	border-radius: 5%;
+}
+
+h1{
+	font-size: 50px
+}
+
+p, h3{
+	font-weight: 50px;
+	font-size: 30px;
+	font-size: 30px;
+
+}
+
+
+.agrandir{
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+}
+
+.avatar{
+	width: 100px;
+	height: 100px;
+	padding-right: 10px;
+}
+
+td{
+	width: 300px;
+}
+/*-------------------------------------------------------------fin de la section-----------------------------------------------------------*/
+
+/*-------------------------------------------------------------Mise en page du footer------------------------------------------------------*/
+footer{
+	background: url("images/footer.jpg")no-repeat;
+	background-size: 100%;
+	width: 100%;
+	position: relative;
+	margin-top: 15px;
+	border-radius: 10px;
+}
+
+footer div{
+	display:flex;
+	justify-content: space-between;
+}
+
+footer img{
+	width: 30px;
+	height: 30px;
+	margin: 15px;
+}
+
+footer a{
+	-webkit-transition:-webkit-transform 2s;
+	transition: transform 2s, border-radius 1s;
+}
+
+footer a:hover{
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+	border-radius: 50px;
+}
+/*----------------------------------------------------------------Fin du footer-------------------------------------------------------------*/
+
+@media screen and (max-width: 1024px){
+	 html{
+		 width: 100%;
+	 }
+	 #ardoise{
+		display: none;
+	}
+	
+	#logo{
+		width: 70px;
+		height: 70px;
+		position: absolute;
+		top: -5px;
+		right: 0px;
+		z-index: 2;
+	}
+	
+	header{
+		background:url("images/menu.png") no-repeat;
+		background-position: top;
+		background-position: left;
+		background-size: 10%;
+		background-color:#00c4ff;
+		text-align:center;
+		font-size:24pt;
+		width:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		height:40px;
+		padding:10px 0px 10px 0px;
+		z-index: 1;
+	}
+
+							
+	header ul{
+		position: relative;
+		left:0px;
+		margin-top:50px;
+		padding:0px;
+		display:block;
+		list-style-type:none;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 1s linear;
+	}
+							
+	header ul li{
+		background-image:url("images/footer.jpg");
+		border-bottom:solid 2px #555;
+	}
+							
+	header ul li:hover{
+		background-color:#e6dcd2;
+		cursor:pointer;
+	}
+							
+	header:hover  ul{
+		visibility: visible;
+		opacity: 1;
+	 }
+
+	 li:hover a{
+		 color: #83bf34;
+	 }
+	section{
+		margin-top: 10%;
+		width:100%;
+
+		
+	}
+	
+	p{
+		overflow: scroll;
+	}
+	
+	footer{
+		width: 100%;
+	}
+	 
+}
+
+/*@media all and (max-width: 1024px){
+	body{
+		background-image: url("images/construction.gif");
+		display:none;
+	}
+	/*
+	ardoise, #logo{
+		display: none;
+		
+	}
+	
+	
+	#menu{
+		list-style-type: none;
+		
+	}
+	
+	section{
+		top: 400px;
+		position: absolute;
+		left: 0px;
+	}
+	
+	
+}

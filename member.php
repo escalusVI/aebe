@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 		<link rel = "stylesheet" href= " style.css">
 		<title>AEBE</title>
 	</head>
