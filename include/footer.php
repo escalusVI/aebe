@@ -4,6 +4,6 @@
 	</div>
 	
 	<div class="pull-right col-md-offset-1 col-md-2">
-		<a href= "mailto:aebe.asso@gmail.com"><img src="images/mail.png" style="width: 30px; height: 30px;"></a>
+		<a href= "mailto:aebe.asso@gmail.com"><img src="images/mail.png" class="pull-right" style="width: 30px; height: 30px;"></a>
 	</div>
 </footer>

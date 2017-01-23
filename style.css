@@ -30,6 +30,7 @@ strong{
 /*---------------------------------------------------- ----Mise en page du header----------------------------------------------------------*/
 header{
 	background: url("images/footer.jpg")no-repeat;
+	border-radius: 10px;
 	
 }
 
@@ -46,6 +47,7 @@ li{
 	text-align: center;
 	padding-top: 2%;
 }
+
 
 nav a:hover{
 		color: #83bf34;
@@ -94,6 +96,10 @@ p, h3{
 	color: black;
 }
 
+.avatar{
+	width: 100px;
+	height: 100px;
+}
 
 
 /*-------------------------------------------------------------fin de la section-----------------------------------------------------------*/
