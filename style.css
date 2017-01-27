@@ -20,14 +20,7 @@ html{
 body{
 	background-color: #e6dcd2;
 	width: 100%;
-	
-	/*background-image: url("images/hautCrayonGauche.png"), url("images/basCrayonGauche.png");
-	background-repeat: no-repeat,repeat-y;
-	background-position: 0 0, 0 359px;*/
-	
 }
-
-
 
 strong{
 	font-family: cursive;
@@ -36,7 +29,9 @@ strong{
 
 /*---------------------------------------------------- ----Mise en page du header----------------------------------------------------------*/
 header{
-	background: url("images/footer.jpg")no-repeat;
+	background-image: url("images/footer.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	border-radius: 10px;
 	
 }
@@ -83,7 +78,6 @@ article{
 	background-color:rgba(255,255,255,0.5);
 	padding: 10px;
 	border-radius: 5%;
-	margin: auto;
 }
 
 h1{
@@ -108,6 +102,18 @@ p, h3{
 	width: 100px;
 	height: 100px;
 }
+
+@media screen and (min-width: 780px){
+
+body{
+ 	background-image: url("images/crayons.png"), url("images/crayonsD.png");
+ 	background-repeat: no-repeat;
+ 	background-position: left 40%, right 40%;
+ }
+
+}
+
+
 /***********************/
 /*  menu cantine aside*/
 /*********************/
@@ -139,12 +145,13 @@ p, h3{
 .menuCantine h2, .menuCantine h3{
 	font-size: 20px;
 }
-
 /*-------------------------------------------------------------fin de la section-----------------------------------------------------------*/
 
 /*-------------------------------------------------------------Mise en page du footer------------------------------------------------------*/
 footer{
-	background: url("images/footer.jpg")no-repeat;
+	background-image: url("images/footer.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	margin-top: 15px;
 	border-radius: 10px;
 	padding: 15px;
