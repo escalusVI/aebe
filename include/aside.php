@@ -4,7 +4,7 @@
 	</section>
 
 	<section class="col-md-12 visible-lg menuCantine">
-		<a href="">
+		<a href="cantine.php">
 		<div>
 			<h2>Menu cantine</h2>
 			<h3>lundi</h3>
