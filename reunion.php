@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 		<link rel = "stylesheet" href= "style.css">
+		<link rel="icon" href="images/logo.png" type="image/png">
 		<title>AEBE</title>
 	</head>
 	<body class="col-md-10">

@@ -5,7 +5,8 @@
 		<meta name="viewport" content="width-device-width, initial-scale=1.0" />
 		<title>AEBE</title>
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="style.css">		
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="images/logo.png" type="image/png">
 	</head>
 	
 	<body>
@@ -37,7 +38,6 @@
 			
 		
 		</div>
-		
 		<script src="bootstrap/js/bootsrap.js"></script>
 		<script src="bootstrap/js/jquery.js"></script>
 	</body>

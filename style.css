@@ -38,10 +38,9 @@ header{
 
 
 nav a{/*mise en forme de la police du menu*/
-	text-decoration: none;
 	color: white;
 	font-family: erasdust; 
-	font-size: 30px;
+	font-size: 25px;
 	margin: 10;
 }
 
@@ -53,6 +52,7 @@ li{
 
 nav a:hover{
 		color: #83bf34;
+		text-decoration: none;
 	}
 
 .logo{
@@ -110,7 +110,7 @@ p, h3{
 /*  menu cantine aside*/
 /*********************/
 .cantine{
-	padding-left: 56px;
+	/*padding-left: 56px;*/
 	padding-bottom: 10px;
 	background-color:rgba(255,255,255,0.8);
 	border: 1px solid black;
@@ -155,12 +155,12 @@ footer{
 	padding: 15px;
 }
 
-footer a{
+footer a img{
 	-webkit-transition:-webkit-transform 2s;
 	transition: transform 2s, border-radius 1s;
 }
 
-footer a:hover{
+footer a img:hover{
 	-webkit-transform: rotate(360deg);
 	transform: rotate(360deg);
 	border-radius: 50px;
@@ -183,25 +183,23 @@ body{
 }
 
 
-@media screen and (min-width: 1300px){
+@media screen and (max-width: 720px){
 
-nav a{
-font-size: 50px;
+.textarea{
+	text-align: center;
+	background-color:rgba(255,255,255,0.5);
+	padding: 10px;
+	border-radius: 5%;
+	font-family: "comic sans ms"; 
+	line-height: 20px;
 }
 
-.logo{
-	width: 200px; height: 200px;
+p, h3{
+	font-weight: 50px;
+	font-size: 15px;
+
 }
 
- .textarea p{
- 	font-size: 50px;
- 	line-height: 70px;
- }
-
-.cantine{
-	width: 400px;
-	height: 300px;
-}
 
 }
 
