@@ -15,7 +15,7 @@
 		<section class="row">
 		
 			<article class="col-md-offset-1 col-md-6">
-				<div class="textarea">
+				<div class="row textarea">
 					<img src="images/construction.gif" alt="site en construction" class="col-xs-10"/>
 				</div>
 			</article>
