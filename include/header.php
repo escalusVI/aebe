@@ -5,8 +5,8 @@
 
 			<nav class="col-md-10 col-md-offset-1">
 				<ul class="hidden-xs list-unstyled list-inline">
-					<li class="col-lg-4 col-md-2"><a href="index.php">Accueil</a></li>
-					<li class="col-lg-4 col-md-3"><a href="event.php">Evénements</a></li>
+					<li class="col-lg-4 col-md-2"><a href="aPropos.php">A propos</a></li>
+					<li class="col-lg-4 col-md-3"><a href="index.php">Evénements</a></li>
 					<li class="col-lg-4 col-md-2"><a href="member.php">Membres</a></li>
 					<li class="col-lg-4 col-md-2"><a href="cantine.php">Cantine</a></li>
 					<li class="col-lg-4 col-md-2"><a href="reunion.php">Réunion</a></li>
