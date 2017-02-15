@@ -1,9 +1,9 @@
 <header class="row">	
-				<a href="index.php"><img src="images/logo.png" class="col-lg-3 col-md-2 col-md-offset-0 col-xs-1 logo"></a>
+				<a href="index.php"><img src="images/logo.png" class="col-lg-3 col-md-2 col-xs-1 logo"></a>
 
 	<div class="col-md-10 header">		
 
-			<nav class="col-md-10">
+			<nav class="col-md-10 col-md-offset-1">
 				<ul class="hidden-xs list-unstyled list-inline">
 					<li class="col-lg-4 col-md-2"><a href="index.php">Accueil</a></li>
 					<li class="col-lg-4 col-md-3"><a href="event.php">Evénements</a></li>

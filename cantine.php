@@ -21,7 +21,7 @@
 		
 		<section class="row">
 		
-			<section class="col-md-7 col--md-offset-1">
+			<article class="col-md-7 col--md-offset-1">
 				
 						<h2 class="col-lg-offset-4">Menu cantine</h2>
 						<div class="col-lg-6 col-xs-6 cantine">
@@ -91,7 +91,7 @@
 						
 						</p>
 			
-			</section>
+			</article>
 			
 			<?php include ("include/aside.php");?>
 			
