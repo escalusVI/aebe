@@ -15,8 +15,9 @@
 		<section>
 			<section class="row">
 			<article class="col-md-offset-1 col-md-6">
-				<div class="textarea">
-					<a href="content/affiche.png" target="_blanck"><img src="content/affiche.png" alt="affiche du marché de noël" style=" width: 40%"/></a>
+				<div class="row textarea">
+					<a href="content/carnaval.png" target="_blanck"><img src="content/carnaval.png" alt="Flyers du Carnaval" class="col-lg-6 col-xs-12 imageEvent"/></a>
+					<a href="content/affiche.png" target="_blanck"><img src="content/affiche.png" alt="affiche du marché de noël" class="col-lg-6 col-xs-12 imageEvent"/></a>
 				</div>
 			</article>
 			

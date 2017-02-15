@@ -105,6 +105,11 @@ p, h3{
 	height: 100px;
 }
 
+.imageEvent{
+	margin-bottom: 10px;
+}
+
+
 
 /***********************/
 /*  menu cantine aside*/
@@ -179,6 +184,12 @@ body{
 	background: url("images/menuCantine.png");
 	background-size: cover;
 	text-align: center;
+	}
+
+	/*Agrandissement des images au survol*/
+	.imageEvent:hover{
+	transform: scale(1.75);
+	z-index: 1;
 	}
 }
 
