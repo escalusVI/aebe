@@ -172,10 +172,7 @@ nav a:hover{
 
 /*---------------------------------------------------------Mise en page de la section------------------------------------------------------*/
 section{
-		padding-top: 15px;
-}
-
-article{
+	padding-top: 15px;
 	background: url("images/background2.jpg")no-repeat;
 	background-position: center;
 	background-size: 100%;
@@ -183,6 +180,7 @@ article{
 	padding-top: 15px;
 
 }
+
 
 .textarea{
 	text-align: center;
@@ -306,7 +304,7 @@ body{
 
 	/*Agrandissement des images au survol*/
 	.imageEvent:hover{
-	transform: scale(1.75);
+	transform: scale(1.50);
 	z-index: 1;
 	}
 }

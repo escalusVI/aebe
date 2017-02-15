@@ -11,9 +11,8 @@
 	
 		<?php include ("include/header.php");?>
 	
-	
-		<section>
-			<section class="row">
+
+		<section class="row">
 			<article class="col-md-offset-1 col-md-6">
 				<div class="row textarea">
 					<a href="content/carnaval.png" target="_blanck"><img src="content/carnaval.png" alt="Flyers du Carnaval" class="col-lg-6 col-xs-12 imageEvent"/></a>
