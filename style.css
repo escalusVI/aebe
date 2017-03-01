@@ -268,12 +268,27 @@ footer{
 	padding: 15px;
 }
 
-footer a img{
+ .cgv{
+ 	color: white;
+
+ }
+
+ .aptiko{
+ 	width: 40px;
+	height: 40px;
+ }
+
+ .icones{
+ 	width: 30px;
+	height: 30px;
+ }
+
+.icones{
 	-webkit-transition:-webkit-transform 2s;
 	transition: transform 2s, border-radius 1s;
 }
 
-footer a img:hover{
+.icones:hover{
 	-webkit-transform: rotate(360deg);
 	transform: rotate(360deg);
 	border-radius: 50px;

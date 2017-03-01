@@ -1,9 +1,9 @@
 <footer class="row">	
 	<div class="pull-left col-md-2">
-		<a href= "https://www.facebook.com/groups/A.E.B.E76/?fref=ts" target="_blank"><img src="images/facebookBlanc.png" style="width: 30px; height: 30px;"></a>
+		<a href= "https://www.facebook.com/groups/A.E.B.E76/?fref=ts" target="_blank"><img src="images/facebookBlanc.png" class="icones"></a>
 	</div>
-	
+	<div class="col-md-4 col-md-offset-2 cgv">Site réalisé par Loic valery<br/>Hébergement par <a href="http://www.aptiko.com/" target="_blank" style="width: 40px; height: 40px;"><img src="images/aptiko.png" class="aptiko"/></a> </div>
 	<div class="pull-right col-md-offset-1 col-md-2">
-		<a href= "mailto:aebe.asso@gmail.com"><img src="images/mail.png" class="pull-right" style="width: 30px; height: 30px;"></a>
+		<a href= "mailto:aebe.asso@gmail.com"><img src="images/mail.png" class="pull-right icones"></a>
 	</div>
 </footer>
