@@ -10,7 +10,7 @@
 
 
 <section class="row">
-<article class="col-md-7 col--md-offset-1">
+<article class="col-md-7 col-md-offset-4">
 	<?php
 		if (!isset($_POST['password']))
 		{ ?>
@@ -36,74 +36,72 @@
 
 			else{
 				?>
-							<article class="col-md-7 col--md-offset-1">
+							<article class="col-md-7 col-md-offset-1">
 
 						<h2 class="col-lg-offset-4">Menu cantine</h2>
 						<div class="col-lg-6 col-xs-6 cantine">
 							<form method="post" action="ajoutBase.php">
 									<h3>Lundi </h3>
-									<input type="date" name="jourLundi">
+									<input type="date" name="jours[]">
 									<p>
 										<h4>entrée</h4>
-											<input type="text" name="entreeLundi" placeholder="entrée"><br>
+											<input type="text" name="entrees[]" placeholder="entrée"><br>
 
 										<h4>plat de resistance</h4>
-											<input type="text" name="legumesLundi" placeholder="legumes"><br>
-											<input type="text" name="viandeLundi" placeholder="viande"><br>
+											<input type="text" name="legumes[]" placeholder="legumes"><br>
+											<input type="text" name="viandes[]" placeholder="viande"><br>
 
 										<h4>dessert</h4>
-											<input type="text" name="dessertLundi" placeholder="dessert">
-
-									</p>
+											<input type="text" name="desserts[]" placeholder="dessert">
 								</div>
 
 								<div class="col-lg-6 col-xs-6 cantine">
 									<h3>Mardi</h3>
-									<input type="date" name="jourMardi">
+									<input type="date" name="jours[]">
 									<p>
 										<h4>entrée</h4>
-											<input type="text" name="entreeMardi" placeholder="entrée"><br>
+											<input type="text" name="entrees[]" placeholder="entrée"><br>
 
 										<h4>plat de resistance</h4>
-											<input type="text" name="legumesMardi" placeholder="legumes"><br>
-											<input type="text" name="viandeMardi" placeholder="viande"><br>
+											<input type="text" name="legumes[]" placeholder="legumes"><br>
+											<input type="text" name="viandes[]" placeholder="viande"><br>
 
 										<h4>dessert</h4>
-											<input type="text" name="dessertMardi" placeholder="dessert">
+											<input type="text" name="desserts[]" placeholder="dessert">
 
 									</p>
 								</div>
 
 								<div class="col-lg-6 col-xs-6 cantine">
 									<h3>Jeudi</h3>
-									<input type="date" name="jourJeudi">
+									<input type="date" name="jours[]">
 									<p>
 										<h4>entrée</h4>
-											<input type="text" name="entreeJeudi" placeholder="entrée"><br>
+											<input type="text" name="entrees[]" placeholder="entrée"><br>
 
 										<h4>plat de resistance</h4>
-											<input type="text" name="legumesJeudi" placeholder="legumes"><br>
-											<input type="text" name="viandeJeudi" placeholder="viande"><br>
+											<input type="text" name="legumes[]" placeholder="legumes"><br>
+											<input type="text" name="viandes[]" placeholder="viande"><br>
 
 										<h4>dessert</h4>
-											<input type="text" name="dessertJeudi" placeholder="dessert">
+											<input type="text" name="desserts[]" placeholder="dessert">
 
 									</p>
 								</div>
 
 								<div class="col-lg-6 col-xs-6 cantine">
 									<h3>Vendredi</h3>
-									<input type="date" name="jourVendredi">
+									<input type="date" name="jours[]">
 									<p>
 										<h4>entrée</h4>
-											<input type="text" name="entreeVendredi" placeholder="entrée"><br>
+											<input type="text" name="entrees[]" placeholder="entrée"><br>
 
 										<h4>plat de resistance</h4>
-											<input type="text" name="legumesVendredi" placeholder="legumes"><br>
-											<input type="text" name="viandeVendredi" placeholder="viande"><br>
+											<input type="text" name="legumes[]" placeholder="legumes"><br>
+											<input type="text" name="viandes[]" placeholder="viande"><br>
 
 										<h4>dessert</h4>
-											<input type="text" name="dessertVendredi" placeholder="dessert"><br/>
+											<input type="text" name="desserts[]" placeholder="dessert"><br/>
 
 
 									</p>

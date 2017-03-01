@@ -1,29 +1,4 @@
-<?php
-
-	$jourLundi =  date('Y-m-d', strtotime($_POST['jourLundi']));
-	$entreeLundi=$_POST['entreeLundi'];
-	$legumesLundi=$_POST['legumesLundi'];
-	$viandeLundi=$_POST['viandeLundi'];
-	$dessertLundi=$_POST['dessertLundi'];
-
-	$jourMardi =  date('Y-m-d', strtotime($_POST['jourMardi']));
-	$entreeMardi=$_POST['entreeMardi'];
-	$legumesMardi=$_POST['legumesMardi'];
-	$viandeMardi=$_POST['viandeMardi'];
-	$dessertMardi=$_POST['dessertMardi'];
-
-	$jourJeudi =  date('Y-m-d', strtotime($_POST['jourJeudi']));
-	$entreeJeudi=$_POST['entreeJeudi'];
-	$legumesJeudi=$_POST['legumesJeudi'];
-	$viandeJeudi=$_POST['viandeJeudi'];
-	$dessertJeudi=$_POST['dessertJeudi'];
-
-	$jourVendredi =  date('Y-m-d', strtotime($_POST['jourVendredi']));
-	$entreeVendredi=$_POST['entreeVendredi'];
-	$legumesVendredi=$_POST['legumesVendredi'];
-	$viandeVendredi=$_POST['viandeVendredi'];
-	$dessertVendredi=$_POST['dessertVendredi'];
-	
+<?php	
 	try
 	{
 		$bdd = new PDO('mysql:host=localhost;dbname=cantine;charset=utf8', 'root', '');//appelde la base deonnées
@@ -33,39 +8,18 @@
 			die('Erreur : '.$e->getMessage());
 	}
 
-	$req = $bdd->prepare('INSERT INTO repas( jour, entree, legumes, viande, dessert) VALUES (:jour, :entree, :legumes, :viande, :dessert)');
+	$req = $bdd->prepare(' UPDATE repas set jour=:jour, entree=:entree, legumes=:legumes, viande=:viande, dessert=:dessert where id=:id');
 
-	$req->execute(array(
-		'jour'=> $jourLundi,
-		'entree'=> $entreeLundi,
-		'legumes'=> $legumesLundi,
-		'viande'=> $viandeLundi,
-		'dessert'=> $dessertLundi
+	for ($i = 0; $i < 4; $i++) {
+		$req->execute(array(
+			':jour'=> date('Y-m-d', strtotime($_POST['jours'][$i])),
+			':entree'=> $_POST['entrees'][$i],
+			':legumes'=> $_POST['legumes'][$i],
+			':viande'=> $_POST['viandes'][$i],
+			':dessert'=> $_POST['desserts'][$i],
+			':id' => $i
 		));
-
-	$req->execute(array(
-		'jour'=> $jourMardi,
-		'entree'=> $entreeMardi,
-		'legumes'=> $legumesMardi,
-		'viande'=> $viandeMardi,
-		'dessert'=> $dessertMardi
-		));
-
-	$req->execute(array(
-		'jour'=> $jourJeudi,
-		'entree'=> $entreeJeudi,
-		'legumes'=> $legumesJeudi,
-		'viande'=> $viandeJeudi,
-		'dessert'=> $dessertJeudi
-		));
-
-	$req->execute(array(
-		'jour'=> $jourVendredi,
-		'entree'=> $entreeVendredi,
-		'legumes'=> $legumesVendredi,
-		'viande'=> $viandeVendredi,
-		'dessert'=> $dessertVendredi
-		));
+	}
 ?>
 
 <a href="../cantine.php">retour sur la page cantine</a>
