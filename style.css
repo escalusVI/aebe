@@ -276,6 +276,7 @@ footer{
  .aptiko{
  	width: 40px;
 	height: 40px;
+	margin-bottom: 13px;
  }
 
  .icones{
@@ -309,7 +310,7 @@ footer{
 body{
  	background-image: url("images/crayons.png"), url("images/crayonsD.png");
  	background-repeat: no-repeat;
- 	background-position: left 40%, right 40%;
+ 	background-position: left 40%, right 40%, fixed;
  }
 
  .Cantine{
