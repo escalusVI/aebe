@@ -201,6 +201,13 @@ p, h3{
 
 }
 
+.cantine h3{
+	font-size: 20px;
+}
+
+.cantine{
+	height: 300px;
+}
 
 .agrandir{
 	text-decoration: none;
