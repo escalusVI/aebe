@@ -1,5 +1,5 @@
 <header class="row">	
-				<a href="index.php"><img src="images/logo.png" class="col-lg-3 col-md-2 col-xs-1 logo"></a>
+				<a href="index.php"><img src="images/logo.png" class="col-lg-3 col-md-2 col-xs-1 logo" alt="Logo de l'association"></a>
 
 	<div class="col-md-10 header">		
 
