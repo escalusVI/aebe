@@ -7,9 +7,9 @@
 		<link rel="icon" href="images/logo.png" type="image/png">
 		<title>AEBE</title>
 	</head>
-	<body class="col-md-10">
+	<body>
 	
-	<div class="container">
+	<div class="col-md-10 col-md-offset-1 container">
 			
 				<?php include ("include/header.php");?>
 			

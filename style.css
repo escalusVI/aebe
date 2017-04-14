@@ -304,7 +304,7 @@ footer{
 }
 /*----------------------------------------------------------------Fin du footer-------------------------------------------------------------*/
 
-@media all and (min-width: 720px){
+@media all and (min-width: 800px){
 
 	header{
 	background-image: url("images/footer.jpg");
