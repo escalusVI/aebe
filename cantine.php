@@ -14,14 +14,24 @@
             <?php
                 include ("include/header.php");
                 include ("include/database.php");
+                
+                $day = date("w");   
+                $year = date("Y");
+                $week = date("W");
+                       
+                if (($day == 0) || ($day == 6)) {
+                    $week = sprintf("%02d", $week + 1);
+                    if ($week > date("W", strtotime($year."-12-31"))) {
+                        $year += 1;
+                        $week = sprintf("%02d", 1);;
+                    }
+                }
             ?>
             <section class="row">
                 <article class="col-md-7 col--md-offset-1">
                     <h2 class="col-lg-offset-4">Menu cantine</h2>
                     <div class="col-lg-6 col-xs-6 cantine">
                         <?php
-                            $year = date("Y");
-                            $week = date("W");
                             $jour = date("Y-m-d", strtotime($year."-W".$week."-1"));
                             $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
                             $entree = $repas['entree'];
@@ -44,8 +54,6 @@
                         
                     <div class="col-lg-6 col-xs-6 cantine">
                         <?php
-                            $year = date("Y");
-                            $week = date("W");
                             $jour = date("Y-m-d", strtotime($year."-W".$week."-2"));
                             $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
                             $entree = $repas['entree'];
@@ -68,8 +76,6 @@
                     
                     <div class="col-lg-6 col-xs-6 cantine">
                         <?php
-                            $year = date("Y");
-                            $week = date("W");
                             $jour = date("Y-m-d", strtotime($year."-W".$week."-4"));
                             $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
                             $entree = $repas['entree'];
@@ -92,8 +98,6 @@
                     
                     <div class="col-lg-6 col-xs-6 cantine">
                         <?php
-                            $year = date("Y");
-                            $week = date("W");
                             $jour = date("Y-m-d", strtotime($year."-W".$week."-5"));
                             $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
                             $entree = $repas['entree'];
