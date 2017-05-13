@@ -20,12 +20,16 @@
 				<?php
 				try
 					{
-						$bdd = new PDO('mysql:host=localhost;dbname=cantine;charset=utf8', 'root', '');
+						$bdd = new PDO('mysql:host=localhost;dbname=escalus_cantine;charset=utf8', 'root', '');
 					}
 					catch (Exception $e)
 					{
 					        die('Erreur : ' . $e->getMessage());
 					}
+							$year = date("Y");
+							$week = date("W");
+							$lundi = date("Y-m-d", strtotime($year."-W".$week."-1"));
+		
 				?>
 		<section class="row">
 		
@@ -149,7 +153,7 @@
 			
 		
 		</div>
-		
+
 		<script src="bootstrap/js/bootsrap.js"></script>
 		<script src="bootstrap/js/jquery.js"></script>
 	</body>
