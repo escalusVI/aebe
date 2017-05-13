@@ -1,0 +1,44 @@
+CREATE TABLE IF NOT EXISTS cantine (
+    jour DATE NOT NULL,
+    entree VARCHAR(255) NOT NULL,
+    legumes VARCHAR(255) NOT NULL,
+    viande VARCHAR(255) NOT NULL,
+    dessert VARCHAR(255) NOT NULL,
+    UNIQUE (jour)
+) ENGINE = INNODB;
+
+
+/*CREATE TABLE IF NOT EXISTS clients (
+    ID INT AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    debut VARCHAR(255) NOT NULL,
+    fin VARCHAR(255) NOT NULL,
+    UNIQUE (ID, nom, debut, fin),
+    PRIMARY KEY (ID)
+) ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS conges (
+    employeID INT NOT NULL,
+    debut VARCHAR(255) NOT NULL,
+    fin VARCHAR(255) NOT NULL,
+    UNIQUE(employeID, debut, fin)
+) ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS employes (
+    ID INT AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    serviceID INT DEFAULT -1,
+    UNIQUE (ID, nom, serviceID),
+    PRIMARY KEY (ID, nom, serviceID)
+) ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS services (
+    ID INT AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    UNIQUE (ID, nom),
+    PRIMARY KEY (ID, nom)
+) ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS bandeau (
+    message TEXT NOT NULL
+) ENGINE = INNODB;*/
