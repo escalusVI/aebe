@@ -10,146 +10,115 @@
 	</head>
 	
 	<body>
-
-	
 		<div class="col-md-10 col-md-offset-1 container">
-		
-		
-		
-				<?php include ("include/header.php");?>
-				<?php
-				try
-					{
-						$bdd = new PDO('mysql:host=localhost;dbname=cantine;charset=utf8', 'root', '');
-					}
-					catch (Exception $e)
-					{
-					        die('Erreur : ' . $e->getMessage());
-					}
-				?>
-		<section class="row">
-		
-			<article class="col-md-7 col--md-offset-1">
-				
-						<h2 class="col-lg-offset-4">Menu cantine</h2>
-						<div class="col-lg-6 col-xs-6 cantine">
-							<?php
-							$reponse = $bdd->query('SELECT jour, entree, legumes, viande, dessert FROM repas WHERE DAYNAME(jour) = "monday"');
-							while ($donnees = $reponse->fetch())
-							{
-							?>							
-								<h3>Lundi <br>Le <?php echo $donnees['jour'] ?></h3>
-								<h4>entrée</h4>
-								<h5><?php echo $donnees['entree']; ?><br></h5>	
-								<h4>plat de resistance</h4>
-								<h5><?php echo $donnees['viande']; ?>, <?php echo $donnees['legumes']; ?><br></h5>			
-								<h4>dessert</h4>
-								<h5><?php echo $donnees['dessert']; ?><br></h5>
-							<?php
-							}
-							$reponse->closeCursor();
-							?>
-						</div>
-						<div class="col-lg-6 col-xs-6 cantine">
-							<?php
-							$reponse = $bdd->query('SELECT jour, entree, legumes, viande, dessert FROM repas WHERE DAYNAME(jour) = "tuesday"');
-							while ($donnees = $reponse->fetch())
-							{
-							?>							
-								<h3>Mardi <br>Le <?php echo $donnees['jour'] ?></h3>
-								<h4>entrée</h4>
-								<h5><?php echo $donnees['entree']; ?><br></h5>	
-								<h4>plat de resistance</h4>
-								<h5><?php echo $donnees['viande']; ?>, <?php echo $donnees['legumes']; ?><br></h5>			
-								<h4>dessert</h4>
-								<h5><?php echo $donnees['dessert']; ?><br></h5>
-							<?php
-							}
-							$reponse->closeCursor();
-							?>
-						</div>
-						<div class="col-lg-6 col-xs-6 cantine">
-							<?php
-							$reponse = $bdd->query('SELECT jour, entree, legumes, viande, dessert FROM repas WHERE DAYNAME(jour) = "thursday"');
-							while ($donnees = $reponse->fetch())
-							{
-							?>							
-								<h3>Jeudi <br>Le <?php echo $donnees['jour'] ?></h3>
-								<h4>entrée</h4>
-								<h5><?php echo $donnees['entree']; ?><br></h5>	
-								<h4>plat de resistance</h4>
-								<h5><?php echo $donnees['viande']; ?>, <?php echo $donnees['legumes']; ?><br></h5>			
-								<h4>dessert</h4>
-								<h5><?php echo $donnees['dessert']; ?><br></h5>
-							<?php
-							}
-							$reponse->closeCursor();
-							?>
-						</div>
-						<div class="col-lg-6 col-xs-6 cantine">
-							<?php
-							$reponse = $bdd->query('SELECT jour, entree, legumes, viande, dessert FROM repas WHERE DAYNAME(jour) = "friday"');
-							while ($donnees = $reponse->fetch())
-							{
-							?>							
-								<h3>Vendredi <br>Le <?php echo $donnees['jour'] ?></h3>
-								<h4>entrée</h4>
-								<h5><?php echo $donnees['entree']; ?><br></h5>	
-								<h4>plat de resistance</h4>
-								<h5><?php echo $donnees['viande']; ?>, <?php echo $donnees['legumes']; ?><br></h5>			
-								<h4>dessert</h4>
-								<h5><?php echo $donnees['dessert']; ?><br></h5>
-							<?php
-							}
-							$reponse->closeCursor();
-							?>
-						</div>
-
-<!--						<div class="col-lg-6 col-xs-6 cantine">
-							<h3>Jeudi</h3>
-							<p>
-								<h4>entrée</h4>
-									betterave<br>
-								
-								<h4>plat de resistance</h4>
-									frites<br>
-									steack haché<br>
-									
-								<h4>dessert</h4>
-									glace
-									
-							</p>
-						</div>
-
-						<div class="col-lg-6 col-xs-6 cantine">
-							<h3>Vendredi</h3>
-							<p>
-								<h4>entrée</h4>
-									betterave<br>
-								
-								<h4>plat de resistance</h4>
-									frites<br>
-									steack haché<br>
-									
-								<h4>dessert</h4>
-									glace
-									
-							</p>
-						</div>
-						
-						</p>-->
-			</article>
-			
-			<?php include ("include/aside.php");?>
-			
-		</section>
-		
-		
+            <?php
+                include ("include/header.php");
+                include ("include/database.php");
+            ?>
+            <section class="row">
+                <article class="col-md-7 col--md-offset-1">
+                    <h2 class="col-lg-offset-4">Menu cantine</h2>
+                    <div class="col-lg-6 col-xs-6 cantine">
+                        <?php
+                            $year = date("Y");
+                            $week = date("W");
+                            $jour = date("Y-m-d", strtotime($year."-W".$week."-1"));
+                            $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
+                            $entree = $repas['entree'];
+                            $legumes = $repas['legumes'];
+                            $viande = $repas['viande'];
+                            $dessert = $repas['dessert'];
+                        ?>
+                        
+                        <center><h3>Lundi <?php echo date("d/m/Y", strtotime($jour)); ?></h3></center>   
+                        <h4>Entrée :</h4>
+                        <h5><?php echo $entree; ?></h5>
+                        <br />
+                        <h4>Plat de resistance :</h4>
+                        <h5><?php echo $viande; ?></h5>
+                        <h5><?php echo $legumes; ?></h5>
+                        <br />
+                        <h4>Dessert :</h4>
+                        <h5><?php echo $dessert; ?><br></h5>
+                    </div>
+                        
+                    <div class="col-lg-6 col-xs-6 cantine">
+                        <?php
+                            $year = date("Y");
+                            $week = date("W");
+                            $jour = date("Y-m-d", strtotime($year."-W".$week."-2"));
+                            $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
+                            $entree = $repas['entree'];
+                            $legumes = $repas['legumes'];
+                            $viande = $repas['viande'];
+                            $dessert = $repas['dessert'];
+                        ?>
+                        
+                        <center><h3>Mardi <?php echo date("d/m/Y", strtotime($jour)); ?></h3></center>   
+                        <h4>Entrée :</h4>
+                        <h5><?php echo $entree; ?></h5>
+                        <br />
+                        <h4>Plat de resistance :</h4>
+                        <h5><?php echo $viande; ?></h5>
+                        <h5><?php echo $legumes; ?></h5>
+                        <br />
+                        <h4>Dessert :</h4>
+                        <h5><?php echo $dessert; ?><br></h5>
+                    </div>
+                    
+                    <div class="col-lg-6 col-xs-6 cantine">
+                        <?php
+                            $year = date("Y");
+                            $week = date("W");
+                            $jour = date("Y-m-d", strtotime($year."-W".$week."-4"));
+                            $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
+                            $entree = $repas['entree'];
+                            $legumes = $repas['legumes'];
+                            $viande = $repas['viande'];
+                            $dessert = $repas['dessert'];
+                        ?>
+                        
+                        <center><h3>Jeudi <?php echo date("d/m/Y", strtotime($jour)); ?></h3></center>   
+                        <h4>Entrée :</h4>
+                        <h5><?php echo $entree; ?></h5>
+                        <br />
+                        <h4>Plat de resistance :</h4>
+                        <h5><?php echo $viande; ?></h5>
+                        <h5><?php echo $legumes; ?></h5>
+                        <br />
+                        <h4>Dessert :</h4>
+                        <h5><?php echo $dessert; ?><br></h5>
+                    </div>
+                    
+                    <div class="col-lg-6 col-xs-6 cantine">
+                        <?php
+                            $year = date("Y");
+                            $week = date("W");
+                            $jour = date("Y-m-d", strtotime($year."-W".$week."-5"));
+                            $repas = $pdo->query("SELECT * FROM cantine WHERE jour = '".$jour."'")->fetch();
+                            $entree = $repas['entree'];
+                            $legumes = $repas['legumes'];
+                            $viande = $repas['viande'];
+                            $dessert = $repas['dessert'];
+                        ?>
+                        
+                        <center><h3>Vendredi <?php echo date("d/m/Y", strtotime($jour)); ?></h3></center>   
+                        <h4>Entrée :</h4>
+                        <h5><?php echo $entree; ?></h5>
+                        <br />
+                        <h4>Plat de resistance :</h4>
+                        <h5><?php echo $viande; ?></h5>
+                        <h5><?php echo $legumes; ?></h5>
+                        <br />
+                        <h4>Dessert :</h4>
+                        <h5><?php echo $dessert; ?><br></h5>
+                    </div>
+                </article>
+                <?php include ("include/aside.php");?>
+            </section>
 			<?php include ("include/footer.php");?>
-			
-		
 		</div>
-		
+
 		<script src="bootstrap/js/bootsrap.js"></script>
 		<script src="bootstrap/js/jquery.js"></script>
 	</body>
